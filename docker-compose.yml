@@ -1,0 +1,8 @@
+atheme-irc:
+  image: 'vanityshed/atheme:latest'
+  restart: always
+
+  volumes:
+    - '/opt/dockerdata/atheme/etc:/services/etc'
+    - '/opt/dockerdata/atheme/var:/services/var'
+    - '/etc/localtime:/etc/localtime:ro'
