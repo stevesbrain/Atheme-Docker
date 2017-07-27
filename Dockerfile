@@ -17,6 +17,8 @@ RUN apt-get update  \
     && make \
     && make install \
     && apt-get purge -y build-essential git curl \
+    #&& apt-get autoremove -y \
+    && rm -rf /var/lib/apt/lists/* \
     && cd /root \
     && rm -rf /atheme-src \
     && rm -rf /src; exit 0
